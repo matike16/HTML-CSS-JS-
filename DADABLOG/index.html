@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ch">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>哒哒的小屋 - 个人博客</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+<div class="container">
+    <!-- 头部 -->
+    <div class="headerout">
+        <div class="header">
+            <div class="logo">
+                <h1><a href="#" class="logoa">哒哒的Blog</a></h1>
+            </div>
+            <div class="search">
+                <input type="text" class="headerinput" placeholder="&nbsp;这里(maybe)有你想要的">
+                <button class="headerbutton iconfont icon-sousuo"></button>
+            </div>
+            <div class="nav">
+                <ul class="headerul">
+                    <li class="headerli box">
+                        <a href="#" class="headera item">
+                            <button type="button" class="headerspan iconfont icon-guanyu_o" onclick="showpop">关于</button>
+                        </a>
+                    </li>
+                    <li class="headerli box dropdownbut">
+                        <a href="#" class="headera item">
+                            <span class="headerspan iconfont icon-shoucang">收藏</span>
+                        </a><span class="limar">|</span>
+                        <div class="dropdownout">
+                            <div class="dropdown">
+                                <a href="#"><span class="iconfont icon-yinle">音乐</span></a>
+                                <a href="#"><span class="iconfont icon-dianying">电影</span></a>
+                                <a href="#"><span class="iconfont icon-wp-sj-2">书籍</span></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="headerli box">
+                        <a href="#" class="headera item">
+                            <span class="headerspan iconfont icon-icon-">友链</span>
+                        </a><span class="limar">|</span>
+                    </li>
+                    <li class="headerli box">
+                        <a href="#" class="headera item">
+                            <span class="headerspan iconfont icon-fenlei">分类</span>
+                        </a><span class="limar">|</span>
+                    </li>
+                    <li class="headerli box">
+                        <a href="#" class="headera item">
+                            <span class="headerspan iconfont icon-biaoqian">标签</span>
+                        </a><span class="limar">|</span>
+                    </li>
+                    <li class="headerli box">
+                        <a href="#" class="headera item">
+                            <span class="headerspan iconfont icon-a-Frame174">时间轴</span>
+                        </a><span class="limar">|</span>
+                    </li>
+                    <li class="headerli box">
+                        <a href="#" class="headera item">
+                            <span class="headerspan iconfont icon-shouye">首页</span>
+                        </a><span class="limar">|</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 登录弹窗 -->
+    <div id="mypop-up" class="pop-up">
+        <div class="pop-up-content">
+            <div class="leftpop">
+                <div class="loginheader">
+                    <h2 class="title">登录</h2>
+                </div>
+                <div class="inputcontent">
+                    <input type="text" placeholder="name@mail.com">
+                </div>
+                <div class="inputcontent">
+                    <input type="text" placeholder="Password">
+                </div>
+            </div>
+            <button onclick="hidepop">关闭</button>
+        </div>
+    </div>
+    <script src="JS/pop-up.js"></script>
+
+    <!-- 外部div撑开头部 -->
+    <div style=" width: 100%; height: 60px;"></div>
+
+    <!-- 网页背景动画 -->
+    <div class="catocard">
+        <div class="cloud front">
+            <span class="left-front"></span>
+            <span class="right-front"></span>
+        </div>
+        <span class="sun sunshine"></span>
+        <span class="sun"></span>
+        <div class="cloud back">
+            <span class="left-back"></span>
+            <span class="right-back"></span>
+        </div>
+    </div>
+    <!-- 划分左右两个界面 -->
+    <div class="content wrapper">
+        <div class="leftcolumn">
+            <div class="card leftcard1 clearfix">
+                <!-- a标签的target属性规定在何处打开链接文档 -->
+                <!-- 个人信息展示card -->
+                <div class="userlogo"><img src="./images/userlogo.webp" alt=""></div>
+                <div class="usermes">
+                    <a href="#">
+                        <h1>哒哒溜</h1>
+                        <p>快快乐乐学习 开开心心生活</p>
+                    </a>
+                </div>
+                <hr style="border: 1px dashed #aaa; width: 65%; margin: 0 auto;">
+                <div class="userlist">
+                    <div class="clearfix"><a href="#">文章<span>0</span></a></div>
+                    <div class="clearfix"><a href="#">标签<span>0</span></a></div>
+                    <div class="clearfix"><a href="#">分类<span>0</span></a></div>
+                </div>
+                <div class="userbut"><button><span class="iconfont icon-github-fill"> Follow me</span></button></div>
+                <div class="usernav">
+                    <a href="#"><span class="iconfont icon-github-fill"></span></a>
+                    <a href="#"><span class="iconfont icon-bilibili-line"></span></a>
+                    <a href="#"><span class="iconfont icon-youxiang"></span></a>
+                    <a href="#"><span class="iconfont icon-ai235"></span></a>
+                </div>
+            </div>
+            <div class="card flip-card">
+                <!-- 文章信息与大纲卡 -->
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+
+                        <p class="title">(＾Ｕ＾)ノ~ＹＯ</p>
+                        <p>Put Your Hand Up</p>
+                        <p>(❤ ω ❤)can can see me</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <span class="iconfont icon-gonggao"
+                            style="font-size:1.5em;font-weight: 900;text-align: center;margin-bottom: 20px;">公告</span>
+                        <p class="title"></p>
+                        <p>本站用于记录个人学习和生活</p>
+                        <p>欢迎各位有志之士参与讨论</p>
+                        <p>本站借鉴于👉<a href="https://challis-yin.github.io/" style="color:yellow">林木木的小屋</a></p>
+                        <p>Yoho 被发现了 (＃°Д°)</p>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="card leftcard3">
+                <!-- 文章卡 -->
+            </div>
+            <div class="card leftcard4">
+                <!-- 分类卡 -->
+            </div>
+            <div class="card leftcard5">
+                <!-- 网站咨询卡 -->
+            </div>            
+            <div class="card leftcard6">
+
+            </div>
+        </div>
+        <div class="rightcolumn">
+            <div class="card rightcard1">
+                <!-- 轮播图或欢迎卡 -->
+                <div id="wrap">
+                    <!-- 5张图片 -->
+                    <div class="img-list">
+                        <img src="images/bg1.png" alt="">
+                        <img src="images/bg2.png" alt="">
+                        <img src="images/bg3.png" alt="">
+                        <img src="images/bg4.png" alt="">
+                        <img src="images/bg5.png" alt="">
+                    </div>
+                    <!-- 左右按钮 -->
+                    <div class="arrow">
+                        <button type="button" class="left">
+                            <span class="iconfont icon-arrowcircleleft"></span>
+                        </button>
+                        <button type="button" class="right">
+                            <span class="iconfont icon-arrowcircleright"></span>
+                        </button>
+                    </div>
+                    <!-- 小圆点 -->
+                    <ul class="circle-list">
+                        <li class="circle active" data-n="0"></li>
+                        <li class="circle" data-n="1"></li>
+                        <li class="circle" data-n="2"></li>
+                        <li class="circle" data-n="3"></li>
+                        <li class="circle" data-n="4"></li>
+                    </ul>
+                </div>
+                <div class="rc1header">
+
+                </div>
+            </div>
+            <div class="card rightcard2">
+                <!-- 文章卡 -->
+            </div>
+            <div class="card rightcard3">
+                <!-- 评论区卡 -->
+            </div>
+            <div class="card rightcard4">
+                <!-- 评论区卡 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 网页背景动画 -->
+    <div class="cloud front" style="float: right;">
+        <span class="left-front"></span>
+        <span class="right-front"></span>
+    </div>
+
+    <div id="sidebar">
+        <div>
+            
+        </div>
+    </div>
+    <!-- 返回头部定位图标 -->
+    <div class="scroll-to-top">
+        <span class="iconfont icon-xiangshangshouqi-yuankuang" style="font-size: 40px; transform: rotate(90deg);"></span>
+    </div>
+    <!-- 小彩蛋 -->
+    <button onclick="showModal()" class="easter-egg"></button>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <h1>小彩蛋</h1>
+            <img src="" alt="">
+            <button onclick="hideModal()">关闭</button>
+        </div>
+    </div>
+    <!-- 底部区域 -->
+    <!-- footerout用于撑开主题内容，因为上面都浮起来了，没有清除浮动 -->
+    <div class="footerout"></div>
+    <div class="footer">
+        <h3 style="font-weight: 800;">有趣的生活 快乐的学习</h3>
+        <p>本站著作权归哒哒溜所有</p>
+    </div>
+</div>
+
+    <!-- 轮播图js -->
+    <script src="./JS/wrap.js"></script>
+    <!-- 弹窗 -->
+    <script src="./JS/modal.js"></script>
+    <!-- 对导航栏实现的隐藏效果 -->
+    <script src="./JS/headerhidden.js"></script>
+    <!-- 侧边栏 -->
+    <script src="./JS/sidebar.js"></script>
+    <!-- 返回顶部按钮 -->
+    <script src="./JS/scrolltotop.js"></script>
+</body>
+
+</html>

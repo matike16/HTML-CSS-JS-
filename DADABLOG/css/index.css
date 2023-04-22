@@ -1,0 +1,550 @@
+/* 主页内容 */
+.card{
+    margin-top: 15px;
+}
+body , html{
+    height:100%;
+}
+/* 左列 */
+.leftcolumn{
+    float:left;
+    width:20%;
+    height: cover;
+    /* background-color: yellow; */
+}
+.leftcard1{
+    width:100%;
+    height: 400px;
+    position: relative;
+    box-shadow: 0 2px 14px 0 rgba(0,0,0,0.2);
+    transition:all 1s;
+    border-radius: 1rem;
+    padding-top:4%;
+    background-color: #fff;
+    border:6px solid transparent;
+}
+.leftcard1:hover{
+    box-shadow: 0px 2px 30px rgba(0,0,0,0.4);
+    border:6px solid #5a189a;
+}
+.leftcard1 .userlogo{
+    width:100px;
+    height:25%;
+    margin:0 auto;
+    box-shadow: 0px 1px 8px #ccc;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+.userlogo img{
+    width:100px;
+    height: 100%;
+    border-radius: 50%;
+}
+.usermes{
+    margin-top: 5px;;
+    text-align: center;
+    /* background-color: yellow; */
+}
+.usermes a{
+    color:black;
+}
+.usermes h1{
+    font-size:20px;
+}
+.usermes p{
+    width: 80%;
+    margin: 0 auto 20px;
+    color:#aaa;
+    /* margin-bottom: 20px; */
+}
+.userlist{
+    width: 80%;
+    height: 25%;
+    /* background-color: yellow; */
+    margin: 0 auto;
+}
+.userlist div{
+    margin-top:20px;
+    width:33.3%;
+    text-align: center;
+    float:left;
+    /* background-color: #fff; */
+}
+.userlist span{
+    display:block;
+    margin-top: 3px;
+}
+.userlist a{
+    color:black;
+}
+.userbut{
+    width: 60%;
+    height: 12.5%;
+    /* background-color: yellow; */
+    margin: 0 auto;
+}
+.userbut button{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    /* border: 2px solid */
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+    z-index: 1;
+}
+.userbut button::before,button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    transform: skew(15deg);
+    transition: all 0.5s;
+    overflow: hidden;
+    z-index: -1;
+}
+.userbut button::before {
+    left: -10px;
+    background: #240046;
+}
+.userbut button::after {
+    right: -10px;
+    background: #5a189a;
+}
+.userbut button:hover::before,button:hover::after {
+    width: 59%;
+}
+.userbut button:hover span {
+    color: #e0aaff;
+    transition: 0.3s;
+}
+.userbut button{
+    color: #03045e;
+    font-size: 18px;
+    transition: all 0.3s ease-in;
+    border: 1px solid #000;
+    z-index: 0;
+}
+.usernav{
+    width: 80%;
+    height: 12.5%;
+    margin: 0 auto;
+    text-align: center;
+    transform: translateY(0px);
+    transition: translateY 0.5s ease;
+}
+.usernav a{
+    display: inline-block;
+    width:15%;
+    height:100%;
+    color:black;
+    text-align: center;
+    line-height: 20px;
+    padding: 13px 0;
+    /* background-color: pink; */
+    transition: all .5s;
+}
+.usernav span{
+    font-size: 25px;
+}
+.usernav a:hover{
+    transform: rotate(360deg);
+}
+.leftcard1:hover .userlogo{
+    box-shadow: 0px 1px 8px #aaa;
+}
+.leftcard1 .userlogo:hover{
+    transform: rotateY(180deg);
+}
+.flip-card{
+    /* transparent 透明 */
+    background-color: transparent;
+    width:100%;
+    height: 200px;
+    /* sans-serif无衬线字体 */
+    font-family: sans-serif;
+}
+.flip-card .title{
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+}
+.flip-card-inner{
+    position:relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    /* transition: transform 0.8s;: 这行代码设置了一个持续时间为0.8秒的过渡效果，作用于transform属性。这意味着对元素的transform属性进行的任何更改都将在0.8秒内以平滑的过渡效果进行动画化。
+transform-style: preserve-3d;: 这行代码将transform-style属性设置为preserve-3d，允许元素内部的元素在三维空间中进行变换，同时保留它们的三维层次结构。这个属性通常与3D变换，如rotateX()、rotateY()、rotateZ()、translate3d()等一起使用。 */
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back{
+    box-shadow: 0 2px 14px 0 rgba(0,0,0,0.2);
+    position:absolute;
+    display: flex;
+    /* flex-direction: column; 是 CSS 中的一个属性，用于指定弹性容器（flex container）中子元素（flex item）的排列方向为纵向（从上到下）。这意味着子元素会沿着容器的垂直方向排列，而不是水平方向。
+
+justify-content: center; 是用于在弹性容器中沿主轴（即 flex-direction 指定的轴线）上对子元素进行对齐的属性。当设置为 center 时，子元素会在弹性容器中居中对齐，即它们会在主轴上保持等距离，并且整体居中显示。
+
+所以，将 flex-direction 设置为 column，并将 justify-content 设置为 center，会使弹性容器中的子元素在纵向排列，并且在容器中居中对齐 */
+    flex-direction:column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 1rem;
+}
+.flip-card-front {
+    background: linear-gradient(120deg, #fff, #fff 88%,
+    #fff 40%, rgba(255, 127, 80, 0.603) 48%);
+
+    color: coral;
+}
+
+.flip-card-back {
+    background: linear-gradient(120deg, rgb(255, 174, 145) 30%, coral 88%,
+    bisque 40%, #fff 78%);
+    color: white;
+    transform: rotateY(180deg);
+}
+.leftcard3{
+    width:100%;
+    height: 200px;
+    box-shadow: 0 2px 14px 0 rgba(0,0,0,0.2);
+    transition:all 0.5s;
+    border-radius: 1rem;
+    background-color: #fff;
+    /* transition: all .5s; */
+}
+.leftcard3:hover{
+    box-shadow: 0px 2px 30px rgba(0,0,0,0.4);
+    /* transform: rotateY(180deg); */
+}
+.leftcard3 .cardtitle2{
+    width:100%;
+    /* background-color: yellow; */
+    /* margin:0 auto; */
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+.leftcard3 .cardtitle2 span{
+    width:100px;
+    /* background-color: #fff; */
+    margin:0 auto;
+}
+.leftcard3 .cardcontent2{
+    width:80%;
+    height:cover;
+    /* background-color: pink; */
+    margin:0 auto 15px;
+    /* border: 1px solid black; */
+    border-radius: 15px;
+}
+.leftcard4{
+    width:100%;
+    height: 385px;
+    box-shadow: 0 2px 14px 0 rgba(0,0,0,0.2);
+    transition:all 0.5s;
+    /* background:linear-gradient(120deg, bisque 60%, rgb(255, 231, 222) 88%); */
+    background-color: #fff;
+    border-radius: 1rem;
+}
+.leftcard4:hover{
+    box-shadow: 0px 2px 30px rgba(0,0,0,0.4);
+}
+.leftcard5{
+    width:100%;
+    height: 400px;
+    box-shadow: 0 2px 14px 0 rgba(0,0,0,0.2);
+    transition:all 0.5s;
+    /* background:linear-gradient(120deg, bisque 60%, rgb(255, 231, 222) 88%); */
+    background-color: #fff;
+    border-radius: 1rem;
+}
+.leftcard5:hover{
+    box-shadow: 0px 2px 30px rgba(0,0,0,0.4);
+}
+.leftcard6{
+    width:100%;
+    height: 400px;
+    box-shadow: 0 2px 14px 0 rgba(0,0,0,0.2);
+    transition:all 0.5s;
+    /* background:linear-gradient(120deg, bisque 60%, rgb(255, 231, 222) 88%); */
+    background-color: #fff;
+    border-radius: 1rem;
+}
+.leftcard6:hover{
+    box-shadow: 0px 2px 30px rgba(0,0,0,0.4);
+}
+/* 右列 */
+.rightcolumn{
+    float:left;
+    margin-left: 1%;
+    width: 79%;
+    height: 100%;
+    /* background-color: pink; */
+}
+.rightcard1{
+    width:100%;
+    height:400px;
+    box-shadow: 0 2px 14px 0 rgba(0,0,0,0.2);
+    transition:all 0.5s;
+    border-radius: 1rem;
+    /* background:linear-gradient(120deg, bisque 60%, rgb(255, 231, 222) 88%); */
+    background-color: #fff;
+    padding: 1.5% 20px;
+}
+.rightcard1:hover{
+    box-shadow:0px 2px 30px rgba(0,0,0,0.4);
+}
+#wrap {
+    float: left;
+    position: relative;
+    width: 48%;
+    height: 100%;
+    overflow: hidden;
+    box-shadow:0px 2px 30px rgba(0,0,0,0.4);
+    border-radius: 1rem;
+}
+#wrap .img-list {
+    position: relative;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: .5s ease;
+}
+#wrap .img-list img {
+    width: 100%;
+    height:100%;
+}
+#wrap .arrow button {
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+    width: 60px;
+    height: 60px;
+    font: 30px 'icomoon';
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    border-radius: 30%;
+    transition: all .5s;
+}
+#wrap .arrow button span{
+    display: none;
+    color:transparent;
+    font-size: 30px;
+    transition: all .5s;
+}
+#wrap:hover .arrow button span{
+    display: block;
+    color:#fff;
+}
+#wrap .arrow button:hover{
+    background-color: rgba(1, 1, 1, .4);
+}
+#wrap .arrow button:nth-child(1) {
+    padding-left: 20px;
+    left: -25px;
+}
+#wrap .arrow button:nth-child(2) {
+    padding-right: 20px;
+    right: -25px;
+}
+#wrap .circle-list {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    left: 50%;
+    margin-left:-50px;
+}
+#wrap .circle-list>.circle {
+    background-color: rgb(255, 255, 255);
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#wrap .circle-list>.circle.active {
+    background-color:blueviolet;
+    box-shadow: 0px 0px 5px 2px white;
+}
+
+.rc1header{
+    float: left;
+    width:51%;
+    height: 20%;
+    margin-left: 1%;
+    box-shadow:0px 2px 30px rgba(0,0,0,0.4);
+    background-color: yellow;
+    border-radius: 1rem;
+}
+
+
+.rightcard2{
+    width:100%;
+    height: 815px;
+    box-shadow: 0 2px 14px 0 rgba(0,0,0,0.2);
+    transition:all 0.5s;
+    background-color: #fff;
+    border-radius: 1rem;
+}
+.rightcard2:hover{
+    box-shadow:0px 2px 30px rgba(0,0,0,0.4);
+}
+.rightcard3{
+    width:100%;
+    height: 400px;
+    box-shadow: 0 2px 14px 0 rgba(0,0,0,0.2);
+    transition:all 0.5s;
+    background-color: #fff;
+    border-radius: 1rem;
+}
+.rightcard3:hover{
+    box-shadow:0px 2px 30px rgba(0,0,0,0.4);
+}
+.rightcard4{
+    width:100%;
+    height: 400px;
+    box-shadow: 0 2px 14px 0 rgba(0,0,0,0.2);
+    transition:all 0.5s;
+    background-color: #fff;
+    border-radius: 1rem;
+}
+.rightcard4:hover{
+    box-shadow:0px 2px 30px rgba(0,0,0,0.4);
+}
+/* 当屏幕大小小于1904时对版心进行修改 */
+@media screen and (max-width:1904px) {
+    .wrapper{
+        width: 90%;
+        margin:0 auto;
+    }
+    .leftcolumn{
+        width: 20%;
+    }
+    /* .rightcolumn{
+        margin-left: 1%;
+        width:79%;
+    } */
+    .catocard , .cloud{
+        display: none;
+    }
+}
+/* 当屏幕大小小于955px时，两列进行上下分布 */
+@media screen and (max-width:956px) {
+    .leftcolumn , .rightcolumn{
+        width:100%;
+        float:none;
+    }
+    .rightcolumn{
+        margin-left: 0;
+    }
+    .card{
+        height:200px;
+    }
+    .leftcard1{
+        height:400px;
+    }
+    .leftcard3{
+        height:250px;
+    }
+    .rightcard2{
+        height:600px;
+    }
+    .rightcard1{
+        height: 300px;
+    }
+    .rc1header{
+        display: none;
+    }
+    #wrap{
+        width:100%;
+    }
+    .footerout{
+        width: 100%;
+        height:100px;
+    }
+}
+
+/* 滚动条样式 */
+.rightcard2::-webkit-scrollbar{
+    width:5px;
+    height: 100%;
+}
+/* 滚动的滑块 */
+.rightcard2::-webkit-scrollbar-thumb{
+    background-color: hsl(230deg 69% 61%);
+}
+
+/* 侧边栏 */
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: -220px;
+    width: 220px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 14px 0 rgba(0,0,0,0.2);
+    border-radius:0 15px 15px 0;
+    transition: all 0.5s ease-in-out;
+    z-index: 200;
+}
+#sidebar.show {
+    left: 0;
+}
+#sidebar:hover{
+    box-shadow:0px 2px 30px rgba(0,0,0,0.4);
+}
+
+/* 小彩蛋 */
+.easter-egg{
+    width:50px;
+    height:50px;
+    position:fixed;
+    bottom:10px;
+    left:20px;
+    border-radius: 50%;
+    cursor:pointer;
+    transition: all 3s;
+}
+.easter-egg:hover{
+    background-color: #007bff;
+}
+
+/* 弹窗 */
+.modal {
+    display: none; /* 默认隐藏弹窗 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明的背景 */
+    z-index: 999 /* 弹窗层级 */;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.modal-content {
+    width: 300px;
+    height: 600px;
+    background-color: #fff;
+    margin: 200px auto 0; /* 居中显示 */
+    padding-top: 20px;
+    text-align: center;
+    border-radius: 1rem;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
